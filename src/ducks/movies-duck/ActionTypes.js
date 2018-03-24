@@ -1,0 +1,10 @@
+export const FETCH_MOVIES_REQUEST = '@@movies/FETCH_MOVIES_REQUEST';
+export const FETCH_MOVIES_SUCCESS = '@@movies/FETCH_MOVIES_SUCCESS';
+export const FETCH_MOVIES_ERROR = '@@movies/FETCH_MOVIES_ERROR';
+export const FETCH_GENRES_REQUEST = '@@movies/FETCH_GENRES_REQUEST';
+export const FETCH_GENRES_SUCCESS = '@@movies/FETCH_GENRES_SUCCESS';
+export const FETCH_GENRES_ERROR = '@@movies/FETCH_GENRES_ERROR';
+export const FETCH_GENRE_ID = '@@movies/FETCH_GENRE_ID';
+export const FETCH_MOVIE_REQUEST = '@@movies/FETCH_MOVIE_REQUEST';
+export const FETCH_MOVIE_SUCCESS = '@@movies/FETCH_MOVIE_SUCCESS';
+export const FETCH_MOVIE_ERROR = '@@movies/FETCH_MOVIE_ERROR';
