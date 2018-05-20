@@ -8,13 +8,9 @@ export const selectMovies = state => {
   return state.movies.moviesList;
 };
 
-export const selectMovie = state => {
-  return state.movies.selectedMovie;
-};
+export const selectMovie = state => state.movies.selectedMovie;
 
-export const selectActiveGenre = state => {
-  return state.movies.genreId;
-};
+export const selectActiveGenre = state => state.movies.genreId;
 
 export const selectGenres = state => {
   if (state.movies.genres.length && state.movies.moviesList.length) {
@@ -26,14 +22,10 @@ export const selectGenres = state => {
         })
     );
 
-    return state.movies.genres.filter(genre => {
-      return activeIds.has(genre.id);
-    });
+    return state.movies.genres.filter(genre => activeIds.has(genre.id));
   }
 
   return state.movies.genres;
 };
 
-export const selectError = state => {
-  return state.movies.error;
-};
+export const selectError = state => state.movies.error;
