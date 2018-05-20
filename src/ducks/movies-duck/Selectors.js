@@ -17,9 +17,7 @@ export const selectGenres = state => {
     const activeIds = new Set(
       state.movies.moviesList
         .map(item => item.genre_ids)
-        .reduce(function(a, b) {
-          return a.concat(b);
-        })
+        .reduce((a, b) => a.concat(b))
     );
 
     return state.movies.genres.filter(genre => activeIds.has(genre.id));
