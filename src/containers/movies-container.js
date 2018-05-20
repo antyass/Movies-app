@@ -17,6 +17,10 @@ class MoviesContainer extends React.Component {
     this.props.fetchGenresRequest();
   }
 
+  shouldComponentUpdate(nextProps) {
+    return this.props.genreId === 0 || this.props.genreId !== nextProps.genreId;
+  }
+
   handleGenreButtonClick(id) {
     this.props.fetchGenreId(id);
   }

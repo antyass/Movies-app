@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
 import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
@@ -21,7 +21,7 @@ const PrivateRouter = () => {
 
 const AppContainer = props => {
   return (
-    <div>
+    <Fragment>
       <NavBar logout={props.logout} isAuth={props.isAuth} />
       <Route exact path="/" component={Home} />
       <Route path="/login" component={AuthContainer} />
@@ -39,7 +39,7 @@ const AppContainer = props => {
           )
         }}
       />
-    </div>
+    </Fragment>
   );
 };
 

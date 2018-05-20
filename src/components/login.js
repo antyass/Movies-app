@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { withStyles, TextField, Button, Typography } from "material-ui";
 
@@ -55,7 +55,7 @@ class Login extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <Fragment>
         <form className={classes.form} onSubmit={this.handleSubmit}>
           <TextField
             className={classes.form__field}
@@ -87,7 +87,7 @@ class Login extends React.Component {
         >
           {this.props.error}
         </Typography>
-      </div>
+      </Fragment>
     );
   }
 }

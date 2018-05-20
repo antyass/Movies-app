@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { Grid, withStyles, Button, Typography } from "material-ui";
 import MoviePreview from "./movie-preview";
@@ -32,7 +32,7 @@ const MovieList = props => {
   const { movies, classes, genreId } = props;
   const genres = [{ id: 0, name: "All" }, ...props.genres];
   return movies.length > 0 ? (
-    <div>
+    <Fragment>
       <Grid container spacing={24} className={classes.movies__genres}>
         {genres.map(genre => (
           <Grid key={genre.id} className={classes.movies__genre}>
@@ -54,7 +54,7 @@ const MovieList = props => {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Fragment>
   ) : (
     <Typography variant="title" align="center" color="inherit">
       Loading...
